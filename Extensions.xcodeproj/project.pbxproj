@@ -12,6 +12,7 @@
 		9B3E75041DBA83DC00C148EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B3E75021DBA83DC00C148EE /* Main.storyboard */; };
 		9B3E75061DBA83DC00C148EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B3E75051DBA83DC00C148EE /* Assets.xcassets */; };
 		9B3E75091DBA83DC00C148EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B3E75071DBA83DC00C148EE /* LaunchScreen.storyboard */; };
+		9B3E75111DBA83F400C148EE /* Date + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3E75101DBA83F400C148EE /* Date + Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,8 @@
 		9B3E75051DBA83DC00C148EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9B3E75081DBA83DC00C148EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9B3E750A1DBA83DC00C148EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B3E75101DBA83F400C148EE /* Date + Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Date + Extensions.swift"; path = "../Date + Extensions.swift"; sourceTree = "<group>"; };
+		9B3E75121DBA86C000C148EE /* Extension Testing.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Extension Testing.playground"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,8 +57,10 @@
 		9B3E74FD1DBA83DC00C148EE /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				9B3E74FE1DBA83DC00C148EE /* AppDelegate.swift */,
 				9B3E75001DBA83DC00C148EE /* ViewController.swift */,
+				9B3E75121DBA86C000C148EE /* Extension Testing.playground */,
+				9B3E75101DBA83F400C148EE /* Date + Extensions.swift */,
+				9B3E74FE1DBA83DC00C148EE /* AppDelegate.swift */,
 				9B3E75021DBA83DC00C148EE /* Main.storyboard */,
 				9B3E75051DBA83DC00C148EE /* Assets.xcassets */,
 				9B3E75071DBA83DC00C148EE /* LaunchScreen.storyboard */,
@@ -138,6 +143,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B3E75011DBA83DC00C148EE /* ViewController.swift in Sources */,
+				9B3E75111DBA83F400C148EE /* Date + Extensions.swift in Sources */,
 				9B3E74FF1DBA83DC00C148EE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
