@@ -221,10 +221,27 @@ extension Date {
 			return false
 		}
 	}
+	
+	/**
+	The timestamp format of a date, no spaces.
+	
+	- Returns: String, ex.
+	*/
+	func timestamp() -> String {
+		let dateFormatter = DateFormatter()
+		dateFormatter.dateStyle = .short
+		dateFormatter.dateFormat = "yyyy-mm-dd_hh:mm:ss"
+		
+		
+		
+		return dateFormatter.string(from: self)
+	}
+
 }
 
 today.DDMMYY()
 today.time()
+today.timestamp()
 
 
 

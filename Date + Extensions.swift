@@ -138,15 +138,15 @@ extension Date {
 	/**
 	The timestamp format of a date, no spaces.
 	
-	- Returns: String, ex.
+	- Returns: String, ex. 2016-25-03_07:25:00
 	*/
 	func timestamp() -> String {
 		let dateFormatter = DateFormatter()
 		dateFormatter.dateStyle = .short
-		dateFormatter.dateFormat = "yyyy-mm-dd_hh:mm:ss"
+		dateFormatter.dateFormat = "yyyy-MM-dd_hh:mm:ss"
 		
 		
-		
+		print(dateFormatter.string(from: self))
 		return dateFormatter.string(from: self)
 	}
 	
