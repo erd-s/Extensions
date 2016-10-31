@@ -146,7 +146,6 @@ extension Date {
 		dateFormatter.dateFormat = "yyyy-MM-dd_hh:mm:ss"
 		
 		
-		print(dateFormatter.string(from: self))
 		return dateFormatter.string(from: self)
 	}
 	
