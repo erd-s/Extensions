@@ -8,23 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		9B3E74FF1DBA83DC00C148EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3E74FE1DBA83DC00C148EE /* AppDelegate.swift */; };
-		9B3E75011DBA83DC00C148EE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3E75001DBA83DC00C148EE /* ViewController.swift */; };
 		9B3E75041DBA83DC00C148EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B3E75021DBA83DC00C148EE /* Main.storyboard */; };
 		9B3E75061DBA83DC00C148EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B3E75051DBA83DC00C148EE /* Assets.xcassets */; };
 		9B3E75091DBA83DC00C148EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B3E75071DBA83DC00C148EE /* LaunchScreen.storyboard */; };
 		9B3E75111DBA83F400C148EE /* Date + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3E75101DBA83F400C148EE /* Date + Extensions.swift */; };
+		9B4459291DD8CB4F00041CA6 /* UIViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4459281DD8CB4F00041CA6 /* UIViewController + Extension.swift */; };
+		9B82EC4F1DD3777300224ADE /* String + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B82EC4E1DD3777300224ADE /* String + Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9B3E74FB1DBA83DC00C148EE /* Extensions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Extensions.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B3E74FE1DBA83DC00C148EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9B3E75001DBA83DC00C148EE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9B3E75031DBA83DC00C148EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9B3E75051DBA83DC00C148EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9B3E75081DBA83DC00C148EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9B3E750A1DBA83DC00C148EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B3E75101DBA83F400C148EE /* Date + Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Date + Extensions.swift"; path = "../Date + Extensions.swift"; sourceTree = "<group>"; };
 		9B3E75121DBA86C000C148EE /* Extension Testing.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Extension Testing.playground"; sourceTree = "<group>"; };
+		9B4459281DD8CB4F00041CA6 /* UIViewController + Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extension.swift"; sourceTree = "<group>"; };
+		9B82EC4E1DD3777300224ADE /* String + Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String + Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,16 +59,25 @@
 		9B3E74FD1DBA83DC00C148EE /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				9B3E75001DBA83DC00C148EE /* ViewController.swift */,
 				9B3E75121DBA86C000C148EE /* Extension Testing.playground */,
 				9B3E75101DBA83F400C148EE /* Date + Extensions.swift */,
+				9B82EC4E1DD3777300224ADE /* String + Extension.swift */,
+				9B4459281DD8CB4F00041CA6 /* UIViewController + Extension.swift */,
+				9B82EC4D1DD3776600224ADE /* Supporting Files */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9B82EC4D1DD3776600224ADE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
 				9B3E74FE1DBA83DC00C148EE /* AppDelegate.swift */,
 				9B3E75021DBA83DC00C148EE /* Main.storyboard */,
 				9B3E75051DBA83DC00C148EE /* Assets.xcassets */,
 				9B3E75071DBA83DC00C148EE /* LaunchScreen.storyboard */,
 				9B3E750A1DBA83DC00C148EE /* Info.plist */,
 			);
-			path = Extensions;
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,7 +107,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = Erdos;
 				TargetAttributes = {
 					9B3E74FA1DBA83DC00C148EE = {
@@ -142,9 +153,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B3E75011DBA83DC00C148EE /* ViewController.swift in Sources */,
 				9B3E75111DBA83F400C148EE /* Date + Extensions.swift in Sources */,
 				9B3E74FF1DBA83DC00C148EE /* AppDelegate.swift in Sources */,
+				9B4459291DD8CB4F00041CA6 /* UIViewController + Extension.swift in Sources */,
+				9B82EC4F1DD3777300224ADE /* String + Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,6 +200,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -237,6 +250,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -306,6 +320,7 @@
 				9B3E750F1DBA83DC00C148EE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
