@@ -13,6 +13,7 @@
 		9B3E75091DBA83DC00C148EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B3E75071DBA83DC00C148EE /* LaunchScreen.storyboard */; };
 		9B3E75111DBA83F400C148EE /* Date + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3E75101DBA83F400C148EE /* Date + Extensions.swift */; };
 		9B4459291DD8CB4F00041CA6 /* UIViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4459281DD8CB4F00041CA6 /* UIViewController + Extension.swift */; };
+		9B44592B1DD8CC9700041CA6 /* UIView + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B44592A1DD8CC9700041CA6 /* UIView + Extensions.swift */; };
 		9B82EC4F1DD3777300224ADE /* String + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B82EC4E1DD3777300224ADE /* String + Extension.swift */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +27,7 @@
 		9B3E75101DBA83F400C148EE /* Date + Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Date + Extensions.swift"; path = "../Date + Extensions.swift"; sourceTree = "<group>"; };
 		9B3E75121DBA86C000C148EE /* Extension Testing.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Extension Testing.playground"; sourceTree = "<group>"; };
 		9B4459281DD8CB4F00041CA6 /* UIViewController + Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extension.swift"; sourceTree = "<group>"; };
+		9B44592A1DD8CC9700041CA6 /* UIView + Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView + Extensions.swift"; sourceTree = "<group>"; };
 		9B82EC4E1DD3777300224ADE /* String + Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String + Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -63,6 +65,7 @@
 				9B3E75101DBA83F400C148EE /* Date + Extensions.swift */,
 				9B82EC4E1DD3777300224ADE /* String + Extension.swift */,
 				9B4459281DD8CB4F00041CA6 /* UIViewController + Extension.swift */,
+				9B44592A1DD8CC9700041CA6 /* UIView + Extensions.swift */,
 				9B82EC4D1DD3776600224ADE /* Supporting Files */,
 			);
 			path = Extensions;
@@ -153,6 +156,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B44592B1DD8CC9700041CA6 /* UIView + Extensions.swift in Sources */,
 				9B3E75111DBA83F400C148EE /* Date + Extensions.swift in Sources */,
 				9B3E74FF1DBA83DC00C148EE /* AppDelegate.swift in Sources */,
 				9B4459291DD8CB4F00041CA6 /* UIViewController + Extension.swift in Sources */,
