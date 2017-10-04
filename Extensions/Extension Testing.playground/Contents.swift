@@ -1,247 +1,47 @@
-//: Playground - noun: a place where people can play
 
-import UIKit
+import Foundation
 
-
-var str = "Hello, playground"
-
-var today = Date()
+extension Double {
+	var stringNoTrailingZeros: String {
+		let string = "\(self)"
+		let beforeDecimal = string.components(separatedBy: ".").first
+		var afterDecimal = string.components(separatedBy: ".").last
+		
+		for char in afterDecimal?.characters.reversed() ?? [] {
+			if char == "0" {
+				afterDecimal?.characters.removeLast()
+			} else {
+				break
+			}
+		}
+		
+		if let after = afterDecimal, !after.isEmpty {
+			return (beforeDecimal ?? "0") + "." + after
+		} else {
+			return beforeDecimal ?? "0"
+		}
+	}
+}
 
 extension Date {
 	/**
-	Adds seconds to a certain date.
-	
-	- Parameter seconds: Seconds you want to add.
-	- Returns: Date advanced by number of `seconds`.
+	Returns a rounded value of how much time has passed.
+	ex. time between Jul 27, 1943 and Oct 4, 2017 --> 27098d
+	ex. time between Oct 4, 2017 7:28am and Oct 4, 2017 1:59pm --> 7h
 	*/
-	func addSeconds(seconds: Int) -> Date {
-		return addingTimeInterval(TimeInterval(seconds))
-	}
-	
-	/**
-	Subtracts seconds to a certain date.
-	
-	- Parameter seconds: Seconds you want to subtract.
-	- Returns: Date subtracted by number of `seconds`.
-	*/
-	func subtractSeconds(seconds: Int) -> Date {
-		return addSeconds(seconds: -seconds)
-	}
-	
-	/**
-	Adds minutes to a certain date.
-	
-	- Parameter minutes: Minutes you want to add.
-	- Returns: Date advanced by number of `minutes`.
-	*/
-	func addMinutes(minutes: Int) -> Date {
-		return addSeconds(seconds: minutes*60)
-	}
-	
-	/**
-	Subtracts minutes to a certain date.
-	
-	- Parameter minutes: Minutes you want to subtract.
-	- Returns: Date subtracted by number of `minutes`.
-	*/
-	func subtractMinutes(minutes: Int) -> Date {
-		return addSeconds(seconds: -60*minutes)
-	}
-	
-	/**
-	Adds hours to a certain date.
-	
-	- Parameter hours: Hours you want to add.
-	- Returns: Date advanced by number of `hours`.
-	*/
-	func addHours(hours: Int) -> Date {
-		return addMinutes(minutes: hours*60)
-	}
-	
-	/**
-	Subtracts hours to a certain date.
-	
-	- Parameter hours: Hours you want to subtract.
-	- Returns: Date subtract by number of `hours`.
-	*/
-	func subtractHours(hours: Int) -> Date {
-		return addMinutes(minutes: -60*hours)
-	}
-	
-	/**
-	Adds days to a certain date.
-	
-	- Parameter days: Days you want to add.
-	- Returns: Date advanced by number of `days`.
-	*/
-	func addDays(days: Int) -> Date {
-		return addHours(hours: 24*days)
-	}
-	
-	/**
-	Subtracts days to a certain date.
-	
-	- Parameter days: Days you want to subtract.
-	- Returns: Date subtract by number of `days`.
-	*/
-	func subtractDays(days: Int) -> Date {
-		return addHours(hours: -24*days)
-	}
-	
-	/**
-	Adds weeks to a certain date.
-	
-	- Parameter weeks: weeks you want to add.
-	- Returns: Date advanced by number of `weeks`.
-	*/
-	func addWeeks(weeks: Int) -> Date {
-		return addDays(days: 7*weeks)
-	}
-	
-	/**
-	Subtracts weeks to a certain date.
-	
-	- Parameter weeks: Days you want to subtract.
-	- Returns: Date subtract by number of `weeks`.
-	*/
-	func subtractWeeks(weeks: Int) -> Date {
-		return addDays(days: -7*weeks)
-	}
-	
-	/**
-	The MM/DD/YY format of a date.
-	
-	- Returns: String, ex. 8/14/16
-	*/
-	func MMDDYY() -> String {
-		let dateFormatter = DateFormatter()
-		dateFormatter.dateStyle = .short
+	func timePassed() -> String {
+		let timeIntervalSince = Date().timeIntervalSince(self)
+		let hours = timeIntervalSince / 3600
 		
-		return dateFormatter.string(from: self)
-	}
-	
-	/**
-	Slightly abbreviated format of a date.
-	
-	- Returns: e.g. Aug 14, 2016
-	*/
-	func mediumString() -> String {
-		let dateFormatter = DateFormatter()
-		dateFormatter.dateStyle = .medium
-		
-		return dateFormatter.string(from: self)
-	}
-	
-	/**
-	Date written out.
-	
-	- Returns: e.g. August 14, 2016
-	*/
-	func string() -> String {
-		let dateFormatter = DateFormatter()
-		dateFormatter.dateStyle = .long
-		
-		return dateFormatter.string(from: self)
-	}
-	
-	/**
-	Returns a string representing the time between a date and an `endDate`.
-	
-	- Returns: e.g. 1405 days, 7 hours, and 43 minutes
-	*/
-	func timeUntil(endDate: Date) -> String {
-		let cal = NSCalendar.current
-		let mins: Set = [Calendar.Component.minute]
-		
-		let minutesFromDateToEndDate = cal.dateComponents(mins, from: self, to: endDate)
-		
-		
-		let leftOverHours = minutesFromDateToEndDate.value(for: Calendar.Component.minute)! % 1440
-		let daysLeft = minutesFromDateToEndDate.value(for: Calendar.Component.minute)! / 1440
-		let hoursLeft = leftOverHours / 60
-		let minutesLeft = leftOverHours % 60
-		var daysString: String!
-		var hoursString: String!
-		var minutesString: String!
-		
-		
-		if daysLeft == 1 {
-			daysString = "1 day,"
-		} else if daysLeft == 0 {
-			daysString = ""
+		if hours < 1 {
+			let minutes = hours * 60
+			return round(minutes).stringNoTrailingZeros + "m"
+		} else if hours > 24 {
+			let days = hours / 24
+			return round(days).stringNoTrailingZeros + "d"
 		} else {
-			daysString = "\(daysLeft) days"
-		}
-		
-		
-		if minutesLeft == 1 {
-			minutesString = ", 1 minute"
-		} else if minutesLeft == 0 {
-			minutesString = ""
-		} else {
-			minutesString = ", \(minutesLeft) minutes"
-		}
-		
-		if hoursLeft == 1 {
-			hoursString = ", 1 hour"
-		} else if hoursLeft == 0 {
-			hoursString = ""
-		} else {
-			hoursString = ", \(hoursLeft) hours"
-		}
-		
-		return ("\(daysString!)\(hoursString!)\(minutesString!)")
-	}
-	
-	func DDMMYY() -> String {
-		let dateFormatter = DateFormatter()
-		dateFormatter.dateStyle = .short
-		dateFormatter.dateFormat = "dd/MM/YY"
-		
-		return dateFormatter.string(from: self)
-	}
-	
-	func time() -> String {
-		let dateFormatter = DateFormatter()
-		dateFormatter.dateFormat = "h:mm a"
-		
-		return dateFormatter.string(from: self)
-	}
-	
-	/**
-	Compares two dates.
-	
-	- Parameter endDate: The date to compare.
-	- Returns: `true` if date is before the `endDate`, `false` if it is afterwards.
-	*/
-	func isBefore(endDate: Date) -> Bool {
-		if self.compare(endDate) == ComparisonResult.orderedAscending {
-			return true
-		} else {
-			return false
+			return round(hours).stringNoTrailingZeros + "h"
 		}
 	}
-	
-	/**
-	The timestamp format of a date, no spaces.
-	
-	- Returns: String, ex.
-	*/
-	func timestamp() -> String {
-		let dateFormatter = DateFormatter()
-		dateFormatter.dateStyle = .short
-		dateFormatter.dateFormat = "yyyy-mm-dd_hh:mm:ss"
-		
-		
-		
-		return dateFormatter.string(from: self)
-	}
-
 }
-
-today.DDMMYY()
-today.time()
-today.timestamp()
-
-
 
