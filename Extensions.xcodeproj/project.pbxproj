@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C02E1231F85C65A00D6EB86 /* Collection + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C02E1221F85C65A00D6EB86 /* Collection + Extension.swift */; };
 		0C4642971F856C6B000B17DC /* UIButton + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4642961F856C6B000B17DC /* UIButton + Extension.swift */; };
 		0CF3693A1F855DAF005E7977 /* UIView + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF369391F855DAF005E7977 /* UIView + Extensions.swift */; };
 		0CF3693C1F855DDE005E7977 /* UIViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF3693B1F855DDE005E7977 /* UIViewController + Extension.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0C02E1221F85C65A00D6EB86 /* Collection + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection + Extension.swift"; sourceTree = "<group>"; };
 		0C4642961F856C6B000B17DC /* UIButton + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton + Extension.swift"; sourceTree = "<group>"; };
 		0CF369391F855DAF005E7977 /* UIView + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Extensions.swift"; sourceTree = "<group>"; };
 		0CF3693B1F855DDE005E7977 /* UIViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extension.swift"; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 				0CF369411F855E2E005E7977 /* Double + Extension.swift */,
 				0CF369431F855E38005E7977 /* Int + Extension.swift */,
 				0CF369451F855E95005E7977 /* Array + Extension.swift */,
+				0C02E1221F85C65A00D6EB86 /* Collection + Extension.swift */,
 			);
 			name = "Foundation Class Extensions";
 			sourceTree = "<group>";
@@ -194,6 +197,7 @@
 				0CF369441F855E38005E7977 /* Int + Extension.swift in Sources */,
 				0CF369421F855E2E005E7977 /* Double + Extension.swift in Sources */,
 				9B3E74FF1DBA83DC00C148EE /* AppDelegate.swift in Sources */,
+				0C02E1231F85C65A00D6EB86 /* Collection + Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
