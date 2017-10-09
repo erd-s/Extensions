@@ -10,7 +10,6 @@ import Foundation
 import UIKit
 
 extension UIView {
-	///the view controller that owns this view
 	var parentViewController: UIViewController? {
 		var parentResponder: UIResponder? = self
 		while parentResponder != nil {

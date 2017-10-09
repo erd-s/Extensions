@@ -9,12 +9,10 @@
 import Foundation
 
 extension Double {
-	///self as string
 	var string: String {
 		return "\(self)"
 	}
 	
-	///Drops trailing zeros and returns a string. 10.0 --> "10"
 	var stringNoTrailingZeros: String {
 		let string = "\(self)"
 		let beforeDecimal = string.components(separatedBy: ".").first
